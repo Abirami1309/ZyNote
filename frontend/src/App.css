@@ -1,0 +1,828 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background: linear-gradient(
+    135deg,
+    #f5f3ff,
+    #ede9fe,
+    #ddd6fe
+  );
+  min-height: 100vh;
+}
+
+.App {
+  width: 90%;
+  max-width: 1400px;
+  min-height: 100vh;
+  margin: 20px auto;
+  padding: 30px;
+  border-radius: 25px;
+}
+/* Logo */
+
+.logo-container {
+  text-align: center;
+}
+
+.logo {
+  width: 280px;
+  margin-bottom: 10px;
+}
+
+.tagline {
+  font-size: 2rem;
+  color: #666;
+  font-style: italic;
+  margin-bottom: 10px;
+}
+
+.welcome-text {
+  font-size: 1.8rem;
+  font-weight: 600;
+}
+
+/* Welcome Card */
+
+.welcome-card {
+  background: linear-gradient(
+    135deg,
+    #7c3aed,
+    #9333ea
+  );
+  color: white;
+  padding: 25px;
+  border-radius: 18px;
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+.welcome-card h2 {
+  margin-bottom: 10px;
+}
+
+.welcome-card p {
+  opacity: 0.95;
+}
+
+form {
+  margin-top: 20px;
+}
+
+input,
+textarea {
+  width: 100%;
+  padding: 15px;
+  border: 2px solid #ddd;
+  border-radius: 15px;
+  margin-bottom: 15px;
+  font-size: 16px;
+  transition: 0.3s;
+}
+
+input:focus,
+textarea:focus {
+  outline: none;
+  border-color: #7c3aed;
+  box-shadow: 0 0 12px rgba(124,58,237,0.2);
+}
+
+textarea {
+  height: 120px;
+  resize: none;
+}
+
+/* Buttons */
+
+button {
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+form button {
+  background: #7c3aed;
+  color: white;
+  padding: 12px 25px;
+  border-radius: 12px;
+}
+
+form button:hover {
+  transform: translateY(-2px);
+}
+
+hr {
+  margin: 30px 0;
+  border: none;
+  height: 2px;
+  background: #e5e7eb;
+}
+
+/* Notes */
+
+.note-card {
+  background: #faf5ff;
+  border-left: 6px solid #7c3aed;
+  padding: 22px;
+  border-radius: 18px;
+  margin-bottom: 20px;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.08);
+  transition: 0.3s;
+}
+
+.note-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(124,58,237,0.2);
+}
+
+.note-card h3 {
+  color: #5b21b6;
+  margin-bottom: 12px;
+}
+
+.note-card p {
+  color: #374151;
+  margin-bottom: 15px;
+  line-height: 1.5;
+}
+
+/* Buttons Inside Note */
+
+.note-card button {
+  padding: 10px 18px;
+  border-radius: 10px;
+  color: white;
+  margin-right: 10px;
+}
+
+.edit-btn {
+  background: #2563eb;
+}
+
+.delete-btn {
+  background: #ef4444;
+}
+
+.edit-btn:hover,
+.delete-btn:hover {
+  transform: scale(1.05);
+}
+
+.search-container {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 20px;
+}
+
+.search-box {
+  width: 300px;
+  padding: 12px;
+  border: 2px solid #ddd;
+  border-radius: 12px;
+  font-size: 16px;
+}
+
+.search-box:focus {
+  outline: none;
+  border-color: #7c3aed;
+  box-shadow: 0 0 10px rgba(124, 58, 237, 0.2);
+}
+
+.note-title {
+  cursor: pointer;
+  user-select: none;
+  color: #5b21b6;
+}
+
+.note-title:hover {
+  color: #7c3aed;
+}
+
+.note-card {
+  overflow: hidden;
+}
+
+.pin-btn {
+  background: #f59e0b;
+  color: white;
+  padding: 12px 18px;
+  border-radius: 10px;
+  margin-right: 10px;
+}
+
+.pin-btn:hover {
+  transform: scale(1.05);
+}
+
+/* Toggle Button */
+
+.theme-toggle {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 15px;
+}
+
+.theme-toggle button {
+  background: #111827;
+  color: white;
+  padding: 10px 18px;
+  border-radius: 12px;
+}
+
+.note-date {
+  color: #6b7280;
+  font-size: 14px;
+  margin-top: 10px;
+  margin-bottom: 15px;
+  font-style: italic;
+}
+
+/* Dark Mode */
+
+body.dark-mode {
+  background: #111827;
+}
+
+.App.dark {
+  background: #1f2937;
+}
+
+.App.dark input,
+.App.dark textarea {
+  background: #374151;
+  color: white;
+  border: 1px solid #4b5563;
+}
+
+.App.dark .note-card {
+  background: #374151;
+  color: white;
+}
+
+.App.dark .note-card h3 {
+  color: #c4b5fd;
+}
+
+.App.dark .note-card p {
+  color: #e5e7eb;
+}
+
+.App.dark .search-box {
+  background: #374151;
+  color: white;
+}
+
+.App.dark .welcome-card {
+  background: linear-gradient(
+    135deg,
+    #5b21b6,
+    #6d28d9
+  );
+}
+
+.App.dark .note-date {
+  color: #d1d5db;
+}
+
+.category-tag {
+  display: inline-block;
+  background: #ede9fe;
+  color: #5b21b6;
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 13px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.App.dark .category-tag {
+  background: #4c1d95;
+  color: white;
+}
+
+.App {
+  position: relative;
+}
+
+.top-controls {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  display: flex;
+  gap: 12px;
+  z-index: 100;
+}
+
+.theme-btn,
+.logout-btn {
+  padding: 10px 18px;
+  border: none;
+  border-radius: 10px;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.theme-btn {
+  background: #111827;
+}
+
+.logout-btn {
+  background: #7c3aed;
+}
+
+.theme-btn:hover,
+.logout-btn:hover {
+  transform: translateY(-2px);
+}
+
+.logo-container {
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+.logo {
+  width: 220px;
+  margin-bottom: 10px;
+}
+
+.tagline {
+  font-size: 2rem;
+  color: #666;
+  font-style: italic;
+  margin-bottom: 10px;
+}
+
+.welcome-text {
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: #111827;
+}
+
+.auth-container {
+  width: 900px;
+  max-width: 95%;
+  min-height: 550px;
+  margin: 40px auto;
+
+  display: flex;
+
+  background: white;
+  border-radius: 25px;
+  overflow: hidden;
+
+  box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+}
+
+.auth-left {
+  flex: 1;
+
+  background: linear-gradient(
+    135deg,
+    #7c3aed,
+    #9333ea
+  );
+
+  color: white;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  text-align: center;
+  padding: 40px;
+}
+
+.auth-left img {
+  width: 350px;
+  max-width: 90%;
+  margin-bottom: 20px;
+}
+
+.auth-left h1 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+.auth-left p {
+  font-size: 1.1rem;
+}
+
+.auth-left h2 {
+  font-family: 'Dancing Script', cursive;
+  font-size: 3rem;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.left-description {
+  font-family: 'Great Vibes', cursive;
+  font-size: 1.8rem;
+  text-align: center;
+  line-height: 1.6;
+  max-width: 400px;
+}
+
+.auth-right {
+  flex: 1;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  padding: 50px;
+}
+
+.auth-right h2 {
+  text-align: center;
+  margin-bottom: 25px;
+  color: #5b21b6;
+}
+
+.auth-right label {
+  font-weight: 600;
+  color: #312e81;
+  margin-bottom: 8px;
+  display: block;
+}
+
+.auth-right input {
+  margin-bottom: 20px;
+}
+
+.login-subtitle {
+  text-align: center;
+  color: #6b7280;
+  margin-bottom: 30px;
+}
+
+.left-footer {
+  margin-top: 30px;
+   font-family: 'Dancing Script', cursive;
+  text-align: center;
+  color: white;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+.auth-right button {
+  width: 100%;
+  background: #7c3aed;
+  color: white;
+  padding: 14px;
+  border-radius: 12px;
+}
+
+.auth-right button:hover {
+  background: #6d28d9;
+}
+
+.auth-link {
+  text-align: center;
+  margin-top: 20px;
+  color: #6b7280;
+}
+
+.auth-nav-link {
+  color: #7c3aed;
+  font-weight: 600;
+  margin-left: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.auth-nav-link:hover {
+  text-decoration: underline;
+}
+
+.register-link {
+  color: #7c3aed;
+  font-weight: bold;
+  margin-left: 5px;
+  cursor: pointer;
+}
+
+.register-link:hover {
+  text-decoration: underline;
+}
+.auth-link a {
+  text-decoration: none;
+  color: #7c3aed;
+  font-weight: 600;
+}
+
+.App.dark .auth-container {
+  background: #1f2937;
+}
+
+.App.dark .auth-right {
+  background: #1f2937;
+}
+
+.App.dark .auth-right h2 {
+  color: white;
+}
+
+.App.dark .auth-right input {
+  background: #374151;
+  color: white;
+  border: 1px solid #4b5563;
+}
+
+.App.dark .welcome-text {
+  color: white;
+}
+
+.App.dark .tagline {
+  color: #d1d5db;
+}
+
+.App.dark {
+  background: #1f2937;
+}
+
+.category-filter {
+  display: flex;
+  gap: 12px;
+  margin: 20px 0;
+  flex-wrap: wrap;
+}
+
+.category-filter button {
+  padding: 10px 18px;
+  border: none;
+  border-radius: 25px;
+  background: #ede9fe;
+  color: #5b21b6;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.category-filter button:hover {
+  background: #7c3aed;
+  color: white;
+  transform: translateY(-2px);
+}
+
+.active-category {
+  background: #7c3aed !important;
+  color: white !important;
+  box-shadow: 0 4px 12px rgba(124, 58, 237, 0.3);
+}
+.markdown-content {
+  line-height: 1.7;
+}
+
+.markdown-content h1 {
+  color: #7c3aed;
+  margin-bottom: 10px;
+}
+
+.markdown-content h2 {
+  color: #5b21b6;
+  margin-bottom: 8px;
+}
+
+.markdown-content ul {
+  padding-left: 20px;
+}
+
+.markdown-content code {
+  background: #ede9fe;
+  padding: 2px 6px;
+  border-radius: 6px;
+}
+
+/* Statistics Dashboard */
+
+.stats-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+  margin: 25px 0;
+  flex-wrap: nowrap;
+}
+
+.stat-card {
+  flex: 1;
+  min-width: 140px;
+  background: white;
+  border-radius: 20px;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+  transition: 0.3s;
+}
+
+.stat-card:hover {
+  transform: translateY(-5px);
+}
+
+.stat-card h3 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.stat-card p {
+  color: #6b7280;
+  margin-bottom: 10px;
+}
+
+.stat-card h2 {
+  color: #7c3aed;
+}
+
+/* Dark Mode */
+
+.App.dark .stat-card {
+  background: #374151;
+  color: white;
+}
+
+.App.dark .stat-card p {
+  color: #d1d5db;
+}
+
+.profile-container {
+  max-width: 700px;
+  margin: 40px auto;
+}
+
+.profile-card {
+  background: white;
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.profile-item {
+  margin-bottom: 20px;
+}
+
+.profile-item label {
+  font-weight: bold;
+  color: #7c3aed;
+}
+
+.profile-item p {
+  margin-top: 8px;
+  font-size: 18px;
+}
+
+.profile-btn,
+.password-btn,
+.save-btn,
+.profile-nav-btn {
+  padding: 12px 20px;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  margin-right: 10px;
+}
+
+.profile-btn {
+  background: #7c3aed;
+  color: white;
+}
+
+.password-btn,.save-btn {
+  background: #2563eb;
+  color: white;
+}
+
+.back-btn {
+  background: #7c3aed;
+  color: white;
+  padding: 10px 18px;
+  border: none;
+  border-radius: 12px;
+  margin-bottom: 20px;
+  cursor: pointer;
+}
+
+.back-btn:hover {
+  opacity: 0.9;
+}
+
+.note-image {
+  width: 100%;
+  max-height: 250px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-top: 10px;
+}
+.upload-box {
+  border: 2px dashed #7c4dff;
+  border-radius: 12px;
+  padding: 20px;
+  text-align: center;
+  margin: 15px 0;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.upload-box:hover {
+  background: #f4efff;
+}
+
+.upload-box label {
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 16px;
+}
+.note-card {
+  transition: all 0.3s ease;
+}
+
+.note-card:hover {
+  transform: translateY(-5px);
+}
+button {
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  transform: scale(1.05);
+}
+.ReactModal__Overlay {
+  background: rgba(0, 0, 0, 0.5) !important;
+}
+
+.ReactModal__Content {
+  max-width: 400px;
+  height: fit-content;
+  margin: auto;
+  border-radius: 12px !important;
+  padding: 20px !important;
+  text-align: center;
+}
+.delete-modal {
+  text-align: center;
+  padding: 20px;
+}
+
+.modal-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.delete-btn {
+  background: #dc3545;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.cancel-btn {
+  background: #6c757d;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+@media (max-width: 768px) {
+
+  .dashboard-container,
+  .profile-container,
+  .auth-container {
+    padding: 15px;
+  }
+
+  .note-card {
+    width: 100%;
+  }
+
+  input,
+  textarea,
+  select {
+    width: 100%;
+  }
+
+  button {
+    width: 100%;
+    margin-top: 10px;
+  }
+
+  .navbar {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
