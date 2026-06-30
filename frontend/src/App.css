@@ -804,16 +804,16 @@ button:hover {
   .profile-container,
   .auth-container {
     padding: 15px;
-  }
-
-  .note-card {
     width: 100%;
+    box-sizing: border-box;
   }
 
   input,
   textarea,
   select {
     width: 100%;
+    font-size: 16px;
+    box-sizing: border-box;
   }
 
   button {
@@ -824,5 +824,62 @@ button:hover {
   .navbar {
     flex-direction: column;
     gap: 10px;
+    align-items: center;
   }
+
+  .auth-left {
+    display: none;
+  }
+
+  .auth-right {
+    width: 100%;
+  }
+
+}
+@media (max-width:768px){
+
+  .top-buttons{
+    display:flex;
+    gap:8px;
+    justify-content:center;
+    flex-wrap:wrap;
+  }
+
+  .top-buttons button{
+    width:auto;
+    min-width:80px;
+  }
+
+}
+@media (max-width:768px){
+
+  .stats-container{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:10px;
+  }
+
+}
+@media (max-width:768px){
+
+  .upload-box{
+    padding:20px;
+    font-size:16px;
+  }
+  .note-card{
+    padding:15px;
+    margin-bottom:15px;
+  }
+
+  .note-title{
+    font-size:18px;
+  }
+
+  .note-image{
+  width:100%;
+  max-width:100%;
+  height:auto;
+  border-radius:10px;
+}
+
 }
